@@ -1,0 +1,36 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pirati.dei.set.legodj">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_rockstar"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_rockstar_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+        <activity android:name="com.pirati.dei.set.legodj.gui.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.pirati.dei.set.legodj.gui.activity.BraniActivity"
+            android:parentActivityName="com.pirati.dei.set.legodj.gui.activity.MainActivity" />
+
+        <service
+            android:name="com.pirati.dei.set.legodj.service.MusicService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <!--<receiver android:name=".service.MusicService$NotificationReceiver"/>-->
+    </application>
+</manifest>

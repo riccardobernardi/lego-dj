@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coord"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pirati.dei.set.legodj.gui.activity.BraniActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_brani"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/player_bar"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <include layout="@layout/player" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
